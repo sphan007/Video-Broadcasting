@@ -1,4 +1,5 @@
 #!/bin/bash
+# place input into obs as well
 ffmpeg -i "srt://127.0.0.1:9999?mode=caller" \
   # set fps and resolution
   -vf "fps=59.94,scale=1920:1080" \
