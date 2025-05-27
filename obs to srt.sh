@@ -12,4 +12,4 @@ ffmpeg -i "srt://127.0.0.1:9999?mode=caller" \
   -mpegts_start_pid 260 \
   -mpegts_copyts 1 \
   -f mpegts \
-  "srt://52.86.243.31:20020?pkt_size=1316&mode=caller"
+  "srt://ip_address:port_number?pkt_size=1316&mode=caller"
