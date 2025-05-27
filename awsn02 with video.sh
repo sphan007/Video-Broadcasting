@@ -1,5 +1,5 @@
 #!/bin/bash
-ffmpeg -re -stream_loop -1 -i "C:\Users\khang\OneDrive\Desktop\test.mp4" \
+ffmpeg -re -stream_loop -1 -i "path_to_video_file" \
   -vf "fps=59.94,scale=1920:1080" \
   -c:v libx264 -b:v 10M -minrate 5M -maxrate 5M -bufsize 20M -x264opts nal-hrd=cbr -r 59.94 -pix_fmt yuv420p -profile:v high -level 4.1 \
   -c:a aac -b:a 192k -ac 2 -ar 48000 -sample_fmt fltp \
@@ -12,4 +12,4 @@ ffmpeg -re -stream_loop -1 -i "C:\Users\khang\OneDrive\Desktop\test.mp4" \
   -mpegts_start_pid 260 \
   -mpegts_copyts 1 \
   -f mpegts \
-  "srt://52.4.214.70:20024?pkt_size=1316&mode=caller"
+  "srt://place_ip_here:port_number?pkt_size=1316&mode=caller"
